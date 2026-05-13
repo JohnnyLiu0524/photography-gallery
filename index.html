@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Johnny Liu's Gallery</title>
+    <meta
+      name="description"
+      content="A quiet personal photo gallery of travel, commute, and everyday frames."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar" aria-label="Gallery header">
+      <a class="brand" href="#top" aria-label="Back to top">Johnny Liu's Gallery</a>
+      <button class="info-button" type="button" aria-label="Open information panel" aria-expanded="false">
+        Info
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero-frame" aria-label="Featured photograph">
+        <button
+          class="hero-photo photo-card"
+          type="button"
+          data-category=""
+          data-title=""
+          data-meta=""
+        >
+          <img src="" alt="">
+          <span><strong></strong><small></small></span>
+        </button>
+      </section>
+
+      <section class="gallery" aria-label="Photo gallery"></section>
+    </main>
+
+    <nav class="filter-dock" aria-label="Photo filters">
+      <button class="filter-button is-active" type="button" data-filter="all">All</button>
+      <button class="filter-button" type="button" data-filter="city">City</button>
+      <button class="filter-button" type="button" data-filter="nature">Nature</button>
+      <button class="filter-button" type="button" data-filter="people">People</button>
+    </nav>
+
+    <aside class="info-panel" aria-label="Information panel" aria-hidden="true">
+      <button class="close-info" type="button" aria-label="Close information panel">x</button>
+      <div>
+        <p class="eyebrow">Photo Notes</p>
+        <h2>City, nature, people.</h2>
+        <p>Personal frames shot on Fujifilm X-T5 and iPhone 15 Pro Max.</p>
+      </div>
+      <div>
+        <p class="eyebrow">Gear</p>
+        <ul>
+          <li>Fujifilm X-T5</li>
+          <li>80-300mm</li>
+          <li>35mm</li>
+          <li>16-80mm</li>
+          <li>iPhone 15 Pro Max</li>
+        </ul>
+      </div>
+    </aside>
+    <div class="panel-scrim" hidden></div>
+
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo preview" hidden>
+      <button class="close-lightbox" type="button" aria-label="Close preview">x</button>
+      <img src="" alt="">
+      <div>
+        <strong></strong>
+        <span></span>
+      </div>
+    </div>
+
+    <script src="photos-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

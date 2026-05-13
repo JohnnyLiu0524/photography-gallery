@@ -1,0 +1,325 @@
+window.PHOTOS = [
+  {
+    "src": "photos/ffd24397fb7aced1b22edaec0219697f.jpg",
+    "category": "nature",
+    "title": "Beach Note",
+    "meta": "Nature / Outdoor Frame",
+    "layout": "wide",
+    "featured": true
+  },
+  {
+    "src": "photos/b6e7a34fd91298651e1ed437713d0083.jpg",
+    "category": "nature",
+    "title": "Field House",
+    "meta": "Nature / Outdoor Frame",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/5be7bf3f7bf1eded78199f458915e173.jpg",
+    "category": "city",
+    "title": "Skyline",
+    "meta": "City / Urban Frame",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/03abf438142875552ad49a4a823777bb.jpg",
+    "category": "nature",
+    "title": "Small Visitor",
+    "meta": "Nature / Outdoor Frame",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/064ca582da4b56f3fd0da539522eabde.jpg",
+    "category": "people",
+    "title": "Ice Track",
+    "meta": "People / Human Moment",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/077dbdf450a447710c85aca5f5cecd35.jpg",
+    "category": "people",
+    "title": "Deck Light",
+    "meta": "People / Human Moment",
+    "layout": "tall"
+  },
+  {
+    "src": "photos/0d60f7bdc437dcc18db7493fd9d1df45.jpg",
+    "category": "city",
+    "title": "Street Corner",
+    "meta": "City / Urban Frame",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/134a0ad86ce287700ad3874a6c0153c0.jpg",
+    "category": "city",
+    "title": "York North",
+    "meta": "City / Urban Frame",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/2383398f39f98878be5b3aeebf8a3ec0.jpg",
+    "category": "people",
+    "title": "Control Room",
+    "meta": "People / Human Moment",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/24ecafc2be786f61919d4f4cd3c652d5.jpg",
+    "category": "city",
+    "title": "Market Walk",
+    "meta": "City / Urban Frame",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/30402780f9f016b5bcdd5a445870dd02.jpg",
+    "category": "people",
+    "title": "Window Figure",
+    "meta": "People / Human Moment",
+    "layout": "tall"
+  },
+  {
+    "src": "photos/340868dcf89330bf8cdf0e8830c74570.jpg",
+    "category": "nature",
+    "title": "On Water",
+    "meta": "Nature / Outdoor Frame",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/35f504549ca0d2455c6ff0ce75699a83.jpg",
+    "category": "people",
+    "title": "Gallery Window",
+    "meta": "People / Human Moment",
+    "layout": "tall"
+  },
+  {
+    "src": "photos/3e367f02288f8c28b2dcdf087f6743d1.jpg",
+    "category": "nature",
+    "title": "Red Tulips",
+    "meta": "Nature / Outdoor Frame",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/5fafa3d25576b231dceea4c788993752.jpg",
+    "category": "nature",
+    "title": "Autumn Street",
+    "meta": "Nature / Outdoor Frame",
+    "layout": "tall"
+  },
+  {
+    "src": "photos/6c696979926bf8797aea45ad937dbed0.jpg",
+    "category": "nature",
+    "title": "Tulip Line",
+    "meta": "Nature / Outdoor Frame",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/6e022847c8ea1a3c092b3e60552db4da.jpg",
+    "category": "city",
+    "title": "Signs and Sky",
+    "meta": "City / Urban Frame",
+    "layout": "tall"
+  },
+  {
+    "src": "photos/70ff7c9452c7914ef42b1b9efb53ab14.jpg",
+    "category": "city",
+    "title": "Construction Cut",
+    "meta": "City / Urban Frame",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/77e3b6118bb61f4fcf30e6adc3883475.jpg",
+    "category": "city",
+    "title": "Stacked Homes",
+    "meta": "City / Urban Frame",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/910862955b770bb66939f1bc0d253721.jpg",
+    "category": "people",
+    "title": "Sidewalk Group",
+    "meta": "People / Human Moment",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/96bf7b3b708dbc98263525f30f1236d4.jpg",
+    "category": "city",
+    "title": "Warm Sidewalk",
+    "meta": "City / Urban Frame",
+    "layout": "tall"
+  },
+  {
+    "src": "photos/9a65490b4b32fafade9b7b2cf7cafe55.jpg",
+    "category": "people",
+    "title": "Ice Track II",
+    "meta": "People / Human Moment",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/a2f15f4602d3e5ab2a4c4d9cf0104309.jpg",
+    "category": "people",
+    "title": "Portrait Moment",
+    "meta": "People / Human Moment",
+    "layout": "tall"
+  },
+  {
+    "src": "photos/a63199a534607091e37dba33ce05def9.jpg",
+    "category": "city",
+    "title": "Street Lamp",
+    "meta": "City / Urban Frame",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/b25ae02cdb5ba9ea4c4d3e60e55a4f71.jpg",
+    "category": "people",
+    "title": "Street Sale",
+    "meta": "People / Human Moment",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/ba286bcce0f310ecfd7ffd11fa256d75.jpg",
+    "category": "city",
+    "title": "Corner Detail",
+    "meta": "City / Urban Frame",
+    "layout": "tall"
+  },
+  {
+    "src": "photos/bbb9b2f4fa783ac517622befb45c189e.jpg",
+    "category": "city",
+    "title": "Narrow Street",
+    "meta": "City / Urban Frame",
+    "layout": "tall"
+  },
+  {
+    "src": "photos/bf59ffe37bcb229593bae6dd1cdd9baf.jpg",
+    "category": "nature",
+    "title": "Soft Tulips",
+    "meta": "Nature / Outdoor Frame",
+    "layout": "tall"
+  },
+  {
+    "src": "photos/c83f8023687aca9ad397aa9c19dcb559.jpg",
+    "category": "nature",
+    "title": "Under Autumn",
+    "meta": "Nature / Outdoor Frame",
+    "layout": "tall"
+  },
+  {
+    "src": "photos/c9b68c88e64cb40848849254410a2332.jpg",
+    "category": "city",
+    "title": "City Vertical",
+    "meta": "City / Urban Frame",
+    "layout": "tall"
+  },
+  {
+    "src": "photos/ca385a3fa42d975a4dba0a38dc8f567b.jpg",
+    "category": "nature",
+    "title": "Maple Color",
+    "meta": "Nature / Outdoor Frame",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/e3b5434ec39dc40eefde8c044b844c2c.jpg",
+    "category": "city",
+    "title": "Downtown Reflection",
+    "meta": "City / Urban Frame",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/e89b6a632160433cef0b88615fb70738.jpg",
+    "category": "people",
+    "title": "Street Crossing",
+    "meta": "People / Human Moment",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/f13424a548bbcececf2a35ea01397f78.jpg",
+    "category": "nature",
+    "title": "Autumn Path",
+    "meta": "Nature / Outdoor Frame",
+    "layout": "tall"
+  },
+  {
+    "src": "photos/f5c58fce696da006382d8c0e10e0a92f.jpg",
+    "category": "city",
+    "title": "Blue Tower",
+    "meta": "City / Urban Frame",
+    "layout": "tall"
+  },
+  {
+    "src": "photos/f96982503aba4b1f405008e67b87ca0a.jpg",
+    "category": "city",
+    "title": "Old Facade",
+    "meta": "City / Urban Frame",
+    "layout": "tall"
+  },
+  {
+    "src": "photos/020552256151ace030a686302f385195.jpg",
+    "category": "people",
+    "title": "Stone Figures",
+    "meta": "People / Human Moment",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/037be97788a9040eed01a3adea048121.jpg",
+    "category": "city",
+    "title": "Cable View",
+    "meta": "City / Urban Frame",
+    "layout": "tall"
+  },
+  {
+    "src": "photos/0b353c9bad47dcfc2ac96a9edb0e913a.jpg",
+    "category": "nature",
+    "title": "Photo 039",
+    "meta": "Nature / Outdoor Frame",
+    "layout": "tall"
+  },
+  {
+    "src": "photos/12f84ac38fb2c231bdb3b1844a8b6611.jpg",
+    "category": "nature",
+    "title": "Photo 040",
+    "meta": "Nature / Outdoor Frame",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/3e6e5dca8748d3521a2d6854dc83af64.jpg",
+    "category": "nature",
+    "title": "Photo 041",
+    "meta": "Nature / Outdoor Frame",
+    "layout": "tall"
+  },
+  {
+    "src": "photos/8b9c00d24bf468c6f4e61f81b4e58dc6.jpg",
+    "category": "nature",
+    "title": "Photo 042",
+    "meta": "Nature / Outdoor Frame",
+    "layout": "tall"
+  },
+  {
+    "src": "photos/a1e8eff64490909d446fab2ecb4bc0f7.jpg",
+    "category": "nature",
+    "title": "Photo 043",
+    "meta": "Nature / Outdoor Frame",
+    "layout": "wide"
+  },
+  {
+    "src": "photos/a7d96acf9b6249c8645e2413c5ba6f53.jpg",
+    "category": "nature",
+    "title": "Photo 044",
+    "meta": "Nature / Outdoor Frame",
+    "layout": ""
+  },
+  {
+    "src": "photos/b58ecd94d08f1f109ed61e9b2ee30ec0.jpg",
+    "category": "city",
+    "title": "Photo 045",
+    "meta": "City / Urban Frame",
+    "layout": "tall"
+  },
+  {
+    "src": "photos/c33fe1c3e02102a6f765e4e76ca04586.jpg",
+    "category": "nature",
+    "title": "Photo 046",
+    "meta": "Nature / Outdoor Frame",
+    "layout": "wide"
+  }
+];

@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "photos": "node scripts/update-photos-json.js"
+  }
+}

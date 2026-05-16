@@ -13,6 +13,7 @@ const closeLightbox = document.querySelector(".close-lightbox");
 
 let activeFilter = "all";
 let revealObserver;
+let galleryPhotos = [];
 
 function createPhotoCard(photo, isHero = false) {
   const button = document.createElement("button");
@@ -48,12 +49,21 @@ function setHero(photo) {
   heroCard.querySelector("img").alt = photo.title;
   heroCard.querySelector("strong").textContent = photo.title;
   heroCard.querySelector("small").textContent = photo.meta;
-  heroCard.addEventListener("click", () => showLightbox(photo));
+  heroCard.onclick = () => showLightbox(photo);
+}
+
+function getHeroPhoto(filter) {
+  if (filter === "all") {
+    return galleryPhotos.find((photo) => photo.featured) || galleryPhotos[0];
+  }
+
+  return galleryPhotos.find((photo) => photo.category === filter) || getHeroPhoto("all");
 }
 
 function renderGallery(photos) {
+  galleryPhotos = photos;
   gallery.innerHTML = "";
-  const featured = photos.find((photo) => photo.featured) || photos[0];
+  const featured = getHeroPhoto("all");
   setHero(featured);
 
   photos
@@ -68,6 +78,8 @@ function renderGallery(photos) {
 
 function applyFilter(filter) {
   activeFilter = filter;
+  setHero(getHeroPhoto(filter));
+
   document.querySelectorAll(".gallery .photo-card").forEach((card) => {
     const shouldShow = filter === "all" || card.dataset.category === filter;
     card.classList.toggle("is-hidden", !shouldShow);

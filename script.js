@@ -1,4 +1,4 @@
-const filterButtons = document.querySelectorAll(".filter-button");
+const filterDock = document.querySelector(".filter-dock");
 const gallery = document.querySelector(".gallery");
 const heroCard = document.querySelector(".hero-photo");
 const infoButton = document.querySelector(".info-button");
@@ -18,12 +18,90 @@ const heroCaption = document.querySelector(".hero-caption");
 let activeFilter = "all";
 let revealObserver;
 let galleryPhotos = [];
+let galleryCategories = [];
 let currentLightboxPhotos = [];
 let currentLightboxIndex = 0;
+
+function labelFromCategory(category) {
+  return category
+    .split("-")
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+}
+
+function getCategoriesFromPhotos(photos) {
+  const categories = [];
+  const seen = new Set();
+
+  photos.forEach((photo) => {
+    if (!photo.category || seen.has(photo.category)) {
+      return;
+    }
+
+    seen.add(photo.category);
+    categories.push({
+      id: photo.category,
+      label: labelFromCategory(photo.category),
+      meta: photo.meta || `${labelFromCategory(photo.category)} / Photo Frame`,
+    });
+  });
+
+  return categories;
+}
+
+function mergeCategories(configuredCategories, photoCategories) {
+  const categories = [];
+  const seen = new Set();
+
+  [...configuredCategories, ...photoCategories].forEach((category) => {
+    if (!category?.id || seen.has(category.id)) {
+      return;
+    }
+
+    seen.add(category.id);
+    categories.push(category);
+  });
+
+  return categories;
+}
+
+function renderFilterButtons() {
+  filterDock.innerHTML = "";
+
+  const filters = [{ id: "all", label: "All" }, ...galleryCategories];
+
+  filters.forEach((filter) => {
+    const button = document.createElement("button");
+    button.className = `filter-button${filter.id === activeFilter ? " is-active" : ""}`;
+    button.type = "button";
+    button.dataset.filter = filter.id;
+    button.append(document.createTextNode(`${filter.label} `));
+    button.append(document.createElement("small"));
+    button.addEventListener("click", () => {
+      setActiveFilterButton(button);
+      applyFilter(button.dataset.filter);
+      scrollToTop();
+    });
+    filterDock.append(button);
+  });
+}
 
 function getCuratedLayout(photo, index) {
   if (photo.layout === "tall") {
     return "tall";
+  }
+
+  if (photo.layout === "wide") {
+    return "wide";
+  }
+
+  if (photo.layout === "large" || photo.layout === "feature") {
+    return "large";
+  }
+
+  if (photo.layout === "standard") {
+    return "standard";
   }
 
   if (index % 10 === 0) {
@@ -46,11 +124,14 @@ function getPhotosForFilter(filter) {
 function createPhotoCard(photo, isHero = false, index = 0) {
   const button = document.createElement("button");
   const layout = isHero ? "hero-photo" : getCuratedLayout(photo, index);
+  const rotation = normalizeRotation(photo.rotation);
   button.className = ["photo-card", layout, isHero ? "" : "reveal"].filter(Boolean).join(" ");
   button.type = "button";
   button.dataset.category = photo.category;
   button.dataset.title = photo.title;
   button.dataset.meta = photo.meta;
+  button.style.setProperty("--photo-rotation", `${rotation}deg`);
+  button.classList.toggle("is-rotated", rotation === 90 || rotation === 270);
 
   const image = document.createElement("img");
   image.src = photo.src;
@@ -69,10 +150,18 @@ function createPhotoCard(photo, isHero = false, index = 0) {
   return button;
 }
 
+function normalizeRotation(rotation) {
+  const value = Number(rotation || 0);
+  return [0, 90, 180, 270].includes(value) ? value : 0;
+}
+
 function setHero(photo) {
+  const rotation = normalizeRotation(photo.rotation);
   heroCard.dataset.category = photo.category;
   heroCard.dataset.title = photo.title;
   heroCard.dataset.meta = photo.meta;
+  heroCard.style.setProperty("--photo-rotation", `${rotation}deg`);
+  heroCard.classList.toggle("is-rotated", rotation === 90 || rotation === 270);
   heroCard.querySelector("img").src = photo.src;
   heroCard.querySelector("img").alt = photo.title;
   heroCard.querySelector("strong").textContent = photo.title;
@@ -95,7 +184,12 @@ function getHeroPhoto(filter) {
 
 function renderGallery(photos) {
   galleryPhotos = photos;
+  galleryCategories = mergeCategories(
+    Array.isArray(window.CATEGORIES) ? window.CATEGORIES : [],
+    getCategoriesFromPhotos(photos)
+  );
   gallery.innerHTML = "";
+  renderFilterButtons();
   const featured = getHeroPhoto("all");
   setHero(featured);
   updateFilterCounts();
@@ -120,7 +214,7 @@ function updateFilterCounts() {
     { all: 0 }
   );
 
-  filterButtons.forEach((button) => {
+  document.querySelectorAll(".filter-button").forEach((button) => {
     const count = counts[button.dataset.filter] || 0;
     const countLabel = button.querySelector("small");
 
@@ -151,7 +245,7 @@ function scrollToTop() {
 }
 
 function setActiveFilterButton(activeButton) {
-  filterButtons.forEach((item) => item.classList.remove("is-active"));
+  document.querySelectorAll(".filter-button").forEach((item) => item.classList.remove("is-active"));
   activeButton.classList.add("is-active");
 }
 
@@ -164,8 +258,11 @@ function showLightbox(photo) {
 }
 
 function setLightboxPhoto(photo) {
+  const rotation = normalizeRotation(photo.rotation);
   lightboxImage.src = photo.src;
   lightboxImage.alt = photo.title;
+  lightboxImage.style.setProperty("--photo-rotation", `${rotation}deg`);
+  lightboxImage.classList.toggle("is-rotated", rotation === 90 || rotation === 270);
   lightboxTitle.textContent = photo.title;
   lightboxMeta.textContent = photo.meta;
 
@@ -225,14 +322,6 @@ function setupRevealObserver() {
 
   document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
 }
-
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    setActiveFilterButton(button);
-    applyFilter(button.dataset.filter);
-    scrollToTop();
-  });
-});
 
 infoButton.addEventListener("click", showInfoPanel);
 closeInfo.addEventListener("click", hideInfoPanel);

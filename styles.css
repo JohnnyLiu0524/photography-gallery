@@ -222,8 +222,12 @@ a:focus-visible {
   height: 100%;
   min-height: inherit;
   object-fit: cover;
-  transform: scale(1.001);
+  transform: rotate(var(--photo-rotation, 0deg)) scale(1.001);
   transition: transform 800ms ease, filter 800ms ease, opacity 500ms ease;
+}
+
+.photo-card.is-rotated img {
+  transform: rotate(var(--photo-rotation, 0deg)) scale(1.36);
 }
 
 .photo-card::after {
@@ -262,7 +266,12 @@ a:focus-visible {
 .photo-card:hover img,
 .photo-card:focus-visible img {
   filter: saturate(0.96) contrast(1.04);
-  transform: scale(1.035);
+  transform: rotate(var(--photo-rotation, 0deg)) scale(1.035);
+}
+
+.photo-card.is-rotated:hover img,
+.photo-card.is-rotated:focus-visible img {
+  transform: rotate(var(--photo-rotation, 0deg)) scale(1.42);
 }
 
 .photo-card:hover::after,
@@ -422,6 +431,12 @@ a:focus-visible {
   max-width: min(1180px, 100%);
   max-height: 80vh;
   object-fit: contain;
+  transform: rotate(var(--photo-rotation, 0deg));
+}
+
+.lightbox img.is-rotated {
+  max-width: min(80vh, 100%);
+  max-height: min(1180px, 80vw);
 }
 
 .lightbox div {
@@ -495,10 +510,14 @@ a:focus-visible {
 
   .photo-card,
   .photo-card.large,
-  .photo-card.wide,
-  .photo-card.tall {
+  .photo-card.wide {
     grid-column: span 2;
     grid-row: span 1;
+  }
+
+  .photo-card.tall {
+    grid-column: span 2;
+    grid-row: span 2;
   }
 
   .hero-photo {
@@ -552,6 +571,14 @@ a:focus-visible {
     grid-column: auto;
     grid-row: auto;
     min-height: 420px;
+  }
+
+  .photo-card.wide {
+    min-height: 300px;
+  }
+
+  .photo-card.tall {
+    min-height: 680px;
   }
 
   .photo-card::after,

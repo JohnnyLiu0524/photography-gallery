@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "admin": "node scripts/admin-server.js",
     "photos": "node scripts/update-photos-json.js"
   }
 }

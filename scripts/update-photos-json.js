@@ -5,8 +5,8 @@ const root = path.resolve(__dirname, "..");
 const photosDir = path.join(root, "photos");
 const jsonPath = path.join(root, "photos.json");
 const dataPath = path.join(root, "photos-data.js");
+const categoriesPath = path.join(root, "categories.json");
 const allowedExtensions = new Set([".jpg", ".jpeg", ".png", ".webp"]);
-const knownCategories = new Set(["city", "nature", "people"]);
 
 function toWebPath(filePath) {
   return path.relative(root, filePath).replaceAll(path.sep, "/");
@@ -38,6 +38,18 @@ function readExistingPhotos() {
   }
 
   return JSON.parse(fs.readFileSync(jsonPath, "utf8"));
+}
+
+function readCategories() {
+  if (!fs.existsSync(categoriesPath)) {
+    return [
+      { id: "city", meta: "City / Urban Frame" },
+      { id: "nature", meta: "Nature / Outdoor Frame" },
+      { id: "people", meta: "People / Human Moment" },
+    ];
+  }
+
+  return JSON.parse(fs.readFileSync(categoriesPath, "utf8"));
 }
 
 function readImageSize(filePath) {
@@ -88,24 +100,29 @@ function inferCategory(src) {
   return knownCategories.has(folder) ? folder : "everyday";
 }
 
-function inferLayout(filePath) {
-  const size = readImageSize(filePath);
-
-  if (!size) {
-    return "";
-  }
-
-  const ratio = size.width / size.height;
-
-  if (ratio >= 1.35) {
+function normalizeLayout(layout) {
+  if (layout === "horizon") {
     return "wide";
   }
 
-  if (ratio <= 0.78) {
+  if (layout === "portrait") {
     return "tall";
   }
 
+  if (layout === "feature") {
+    return "large";
+  }
+
+  if (["standard", "wide", "tall", "large"].includes(layout)) {
+    return layout;
+  }
+
   return "";
+}
+
+function normalizeRotation(rotation) {
+  const value = Number(rotation || 0);
+  return [0, 90, 180, 270].includes(value) ? value : 0;
 }
 
 function titleFromIndex(index) {
@@ -113,17 +130,11 @@ function titleFromIndex(index) {
 }
 
 function metaForCategory(category) {
-  if (category === "city") {
-    return "City / Urban Frame";
-  }
-
-  if (category === "people") {
-    return "People / Human Moment";
-  }
-
-  return "Nature / Outdoor Frame";
+  return categories.find((entry) => entry.id === category)?.meta || "Photo / Gallery Frame";
 }
 
+const categories = readCategories();
+const knownCategories = new Set(categories.map((category) => category.id));
 const existingPhotos = readExistingPhotos();
 const existingBySrc = new Map(existingPhotos.map((photo) => [photo.src, photo]));
 const files = walkFiles(photosDir).sort((a, b) => toWebPath(a).localeCompare(toWebPath(b)));
@@ -131,7 +142,11 @@ const fileBySrc = new Map(files.map((file) => [toWebPath(file), file]));
 
 const keptPhotos = existingPhotos
   .filter((photo) => fileBySrc.has(photo.src))
-  .map((photo) => ({ ...photo }));
+  .map((photo) => ({
+    ...photo,
+    layout: normalizeLayout(photo.layout),
+    rotation: normalizeRotation(photo.rotation),
+  }));
 
 const nextPhotos = [...keptPhotos];
 
@@ -148,7 +163,8 @@ for (const file of files) {
     category,
     title: titleFromIndex(nextPhotos.length + 1),
     meta: metaForCategory(category),
-    layout: inferLayout(file),
+    layout: "",
+    rotation: 0,
   });
 }
 

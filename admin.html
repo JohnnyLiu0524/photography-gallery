@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery Manager</title>
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="admin.css">
+  </head>
+  <body>
+    <header class="manager-bar">
+      <div>
+        <p class="eyebrow">Local Manager</p>
+        <h1>Gallery Manager</h1>
+      </div>
+      <div class="actions">
+        <a class="ghost-button" href="index.html" target="_blank" rel="noreferrer">Preview</a>
+        <label class="upload-button">
+          Upload
+          <input class="file-input" type="file" accept="image/jpeg,image/png,image/webp" multiple>
+        </label>
+        <button class="save-button" type="button">Save</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="status-strip" aria-live="polite">
+        <strong class="photo-count">0 photos</strong>
+        <span class="status-message">Loading photos...</span>
+      </section>
+
+      <section class="drop-zone" aria-label="Upload photos" role="button" tabindex="0">
+        <p>Drop photos here to upload</p>
+      </section>
+
+      <section class="placement-guide" aria-label="Gallery placement guide">
+        <div>
+          <p class="eyebrow">Placement Guide</p>
+          <h2>Gallery frame sizes</h2>
+        </div>
+        <div class="placement-grid">
+          <article>
+            <strong>Auto</strong>
+            <span>Let the gallery choose a balanced frame based on sequence.</span>
+          </article>
+          <article>
+            <strong>Standard</strong>
+            <span>Compact 2-column frame. Good for ordinary landscape or detail shots.</span>
+          </article>
+          <article>
+            <strong>Wide</strong>
+            <span>3 columns x 1 row on desktop. Best for cinematic horizontal photos.</span>
+          </article>
+          <article>
+            <strong>Tall</strong>
+            <span>2 columns x 2 rows on desktop. Best for vertical or rotated portraits.</span>
+          </article>
+          <article>
+            <strong>Feature</strong>
+            <span>3 columns x 2 rows on desktop. Use sparingly for standout images.</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="category-manager" aria-label="Manage categories">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Taxonomy</p>
+            <h2>Categories</h2>
+          </div>
+          <form class="category-form">
+            <input name="label" type="text" placeholder="New category">
+            <button type="submit">Add</button>
+          </form>
+        </div>
+        <div class="category-list"></div>
+      </section>
+
+      <section class="photo-list" aria-label="Manage photos"></section>
+    </main>
+
+    <template id="photo-card-template">
+      <article class="photo-item" draggable="true">
+        <div class="drag-handle" aria-hidden="true">Grip</div>
+        <img alt="">
+        <div class="editor-fields">
+          <label>
+            Title
+            <input name="title" type="text">
+          </label>
+          <label>
+            Category
+            <select name="category"></select>
+          </label>
+          <label>
+            Meta
+            <input name="meta" type="text">
+          </label>
+          <label>
+            Gallery Placement
+            <select name="layout">
+              <option value="">Auto</option>
+              <option value="standard">Standard</option>
+              <option value="wide">Wide</option>
+              <option value="tall">Tall</option>
+              <option value="feature">Feature</option>
+            </select>
+          </label>
+          <label>
+            Rotation
+            <select name="rotation">
+              <option value="0">0 deg</option>
+              <option value="90">90 deg</option>
+              <option value="180">180 deg</option>
+              <option value="270">270 deg</option>
+            </select>
+          </label>
+        </div>
+        <div class="item-actions">
+          <label class="featured-toggle">
+            <input name="featured" type="checkbox">
+            Featured
+          </label>
+          <button class="delete-button" type="button">Delete</button>
+        </div>
+      </article>
+    </template>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

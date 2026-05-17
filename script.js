@@ -78,8 +78,11 @@ function setHero(photo) {
   heroCard.querySelector("strong").textContent = photo.title;
   heroCard.querySelector("small").textContent = photo.meta;
   heroCard.onclick = () => showLightbox(photo);
-  heroCaption.querySelector("h1").textContent = photo.title;
-  heroCaption.querySelector("p:not(.eyebrow)").textContent = photo.meta;
+
+  if (heroCaption) {
+    heroCaption.querySelector("h1").textContent = photo.title;
+    heroCaption.querySelector("p:not(.eyebrow)").textContent = photo.meta;
+  }
 }
 
 function getHeroPhoto(filter) {
@@ -119,7 +122,11 @@ function updateFilterCounts() {
 
   filterButtons.forEach((button) => {
     const count = counts[button.dataset.filter] || 0;
-    button.querySelector("small").textContent = count;
+    const countLabel = button.querySelector("small");
+
+    if (countLabel) {
+      countLabel.textContent = count;
+    }
   });
 }
 
@@ -161,7 +168,10 @@ function setLightboxPhoto(photo) {
   lightboxImage.alt = photo.title;
   lightboxTitle.textContent = photo.title;
   lightboxMeta.textContent = photo.meta;
-  lightboxCount.textContent = `${currentLightboxIndex + 1} / ${currentLightboxPhotos.length}`;
+
+  if (lightboxCount) {
+    lightboxCount.textContent = `${currentLightboxIndex + 1} / ${currentLightboxPhotos.length}`;
+  }
 }
 
 function stepLightbox(direction) {
@@ -228,8 +238,8 @@ infoButton.addEventListener("click", showInfoPanel);
 closeInfo.addEventListener("click", hideInfoPanel);
 panelScrim.addEventListener("click", hideInfoPanel);
 closeLightbox.addEventListener("click", hideLightbox);
-prevLightbox.addEventListener("click", () => stepLightbox(-1));
-nextLightbox.addEventListener("click", () => stepLightbox(1));
+prevLightbox?.addEventListener("click", () => stepLightbox(-1));
+nextLightbox?.addEventListener("click", () => stepLightbox(1));
 
 lightbox.addEventListener("click", (event) => {
   if (event.target === lightbox) {

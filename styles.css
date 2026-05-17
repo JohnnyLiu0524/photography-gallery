@@ -134,7 +134,7 @@ a:focus-visible {
     linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.6));
 }
 
-.hero-photo span {
+.photo-card.hero-photo span {
   display: none;
 }
 

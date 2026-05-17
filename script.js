@@ -9,15 +9,43 @@ const lightbox = document.querySelector(".lightbox");
 const lightboxImage = lightbox.querySelector("img");
 const lightboxTitle = lightbox.querySelector("strong");
 const lightboxMeta = lightbox.querySelector("span");
+const lightboxCount = lightbox.querySelector("small");
 const closeLightbox = document.querySelector(".close-lightbox");
+const prevLightbox = document.querySelector(".lightbox-prev");
+const nextLightbox = document.querySelector(".lightbox-next");
+const heroCaption = document.querySelector(".hero-caption");
 
 let activeFilter = "all";
 let revealObserver;
 let galleryPhotos = [];
+let currentLightboxPhotos = [];
+let currentLightboxIndex = 0;
 
-function createPhotoCard(photo, isHero = false) {
+function getCuratedLayout(photo, index) {
+  if (photo.layout === "tall") {
+    return "tall";
+  }
+
+  if (index % 10 === 0) {
+    return "large";
+  }
+
+  if (index % 4 === 0) {
+    return "standard";
+  }
+
+  return photo.layout || "standard";
+}
+
+function getPhotosForFilter(filter) {
+  return filter === "all"
+    ? galleryPhotos
+    : galleryPhotos.filter((photo) => photo.category === filter);
+}
+
+function createPhotoCard(photo, isHero = false, index = 0) {
   const button = document.createElement("button");
-  const layout = isHero ? "hero-photo" : photo.layout || "";
+  const layout = isHero ? "hero-photo" : getCuratedLayout(photo, index);
   button.className = ["photo-card", layout, isHero ? "" : "reveal"].filter(Boolean).join(" ");
   button.type = "button";
   button.dataset.category = photo.category;
@@ -50,6 +78,8 @@ function setHero(photo) {
   heroCard.querySelector("strong").textContent = photo.title;
   heroCard.querySelector("small").textContent = photo.meta;
   heroCard.onclick = () => showLightbox(photo);
+  heroCaption.querySelector("h1").textContent = photo.title;
+  heroCaption.querySelector("p:not(.eyebrow)").textContent = photo.meta;
 }
 
 function getHeroPhoto(filter) {
@@ -65,15 +95,32 @@ function renderGallery(photos) {
   gallery.innerHTML = "";
   const featured = getHeroPhoto("all");
   setHero(featured);
+  updateFilterCounts();
 
   photos
     .filter((photo) => photo !== featured)
-    .forEach((photo) => {
-      gallery.append(createPhotoCard(photo));
+    .forEach((photo, index) => {
+      gallery.append(createPhotoCard(photo, false, index));
     });
 
   setupRevealObserver();
   applyFilter(activeFilter);
+}
+
+function updateFilterCounts() {
+  const counts = galleryPhotos.reduce(
+    (result, photo) => {
+      result.all += 1;
+      result[photo.category] = (result[photo.category] || 0) + 1;
+      return result;
+    },
+    { all: 0 }
+  );
+
+  filterButtons.forEach((button) => {
+    const count = counts[button.dataset.filter] || 0;
+    button.querySelector("small").textContent = count;
+  });
 }
 
 function applyFilter(filter) {
@@ -86,13 +133,45 @@ function applyFilter(filter) {
   });
 }
 
+function scrollToTop() {
+  if (typeof window.scrollTo === "function") {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    return;
+  }
+
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+}
+
+function setActiveFilterButton(activeButton) {
+  filterButtons.forEach((item) => item.classList.remove("is-active"));
+  activeButton.classList.add("is-active");
+}
+
 function showLightbox(photo) {
+  currentLightboxPhotos = getPhotosForFilter(activeFilter);
+  currentLightboxIndex = Math.max(0, currentLightboxPhotos.indexOf(photo));
+  setLightboxPhoto(currentLightboxPhotos[currentLightboxIndex] || photo);
+  lightbox.hidden = false;
+  document.body.classList.add("has-lightbox");
+}
+
+function setLightboxPhoto(photo) {
   lightboxImage.src = photo.src;
   lightboxImage.alt = photo.title;
   lightboxTitle.textContent = photo.title;
   lightboxMeta.textContent = photo.meta;
-  lightbox.hidden = false;
-  document.body.classList.add("has-lightbox");
+  lightboxCount.textContent = `${currentLightboxIndex + 1} / ${currentLightboxPhotos.length}`;
+}
+
+function stepLightbox(direction) {
+  if (lightbox.hidden || currentLightboxPhotos.length === 0) {
+    return;
+  }
+
+  currentLightboxIndex =
+    (currentLightboxIndex + direction + currentLightboxPhotos.length) % currentLightboxPhotos.length;
+  setLightboxPhoto(currentLightboxPhotos[currentLightboxIndex]);
 }
 
 function hideLightbox() {
@@ -139,9 +218,9 @@ function setupRevealObserver() {
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    filterButtons.forEach((item) => item.classList.remove("is-active"));
-    button.classList.add("is-active");
+    setActiveFilterButton(button);
     applyFilter(button.dataset.filter);
+    scrollToTop();
   });
 });
 
@@ -149,6 +228,8 @@ infoButton.addEventListener("click", showInfoPanel);
 closeInfo.addEventListener("click", hideInfoPanel);
 panelScrim.addEventListener("click", hideInfoPanel);
 closeLightbox.addEventListener("click", hideLightbox);
+prevLightbox.addEventListener("click", () => stepLightbox(-1));
+nextLightbox.addEventListener("click", () => stepLightbox(1));
 
 lightbox.addEventListener("click", (event) => {
   if (event.target === lightbox) {
@@ -165,6 +246,14 @@ document.addEventListener("keydown", (event) => {
     if (infoPanel.classList.contains("is-open")) {
       hideInfoPanel();
     }
+  }
+
+  if (event.key === "ArrowLeft") {
+    stepLightbox(-1);
+  }
+
+  if (event.key === "ArrowRight") {
+    stepLightbox(1);
   }
 });
 

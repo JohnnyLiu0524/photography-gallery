@@ -2,7 +2,6 @@ const list = document.querySelector(".photo-list");
 const template = document.querySelector("#photo-card-template");
 const fileInput = document.querySelector(".file-input");
 const saveButton = document.querySelector(".save-button");
-const dropZone = document.querySelector(".drop-zone");
 const statusMessage = document.querySelector(".status-message");
 const photoCount = document.querySelector(".photo-count");
 const categoryForm = document.querySelector(".category-form");
@@ -457,32 +456,6 @@ categoryForm.addEventListener("submit", (event) => {
   const input = categoryForm.elements.label;
   addCategory(input.value);
   input.value = "";
-});
-
-dropZone.addEventListener("dragover", (event) => {
-  event.preventDefault();
-  dropZone.classList.add("is-over");
-});
-
-dropZone.addEventListener("click", () => {
-  fileInput.click();
-});
-
-dropZone.addEventListener("keydown", (event) => {
-  if (event.key === "Enter" || event.key === " ") {
-    event.preventDefault();
-    fileInput.click();
-  }
-});
-
-dropZone.addEventListener("dragleave", () => {
-  dropZone.classList.remove("is-over");
-});
-
-dropZone.addEventListener("drop", (event) => {
-  event.preventDefault();
-  dropZone.classList.remove("is-over");
-  uploadFiles(event.dataTransfer.files).catch((error) => setStatus(error.message));
 });
 
 window.addEventListener("beforeunload", (event) => {

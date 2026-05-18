@@ -138,69 +138,6 @@ main {
   text-align: right;
 }
 
-.drop-zone {
-  margin-top: 12px;
-  display: grid;
-  place-items: center;
-  min-height: 96px;
-  border: 1px dashed rgba(247, 240, 230, 0.24);
-  border-radius: 8px;
-  background: rgba(247, 240, 230, 0.04);
-  color: var(--muted);
-  cursor: pointer;
-  font-weight: 800;
-}
-
-.drop-zone:hover,
-.drop-zone:focus-visible,
-.drop-zone.is-over {
-  border-color: var(--accent);
-  background: rgba(217, 255, 114, 0.1);
-  color: var(--ink);
-}
-
-.drop-zone:focus-visible {
-  outline: 2px solid rgba(217, 255, 114, 0.72);
-  outline-offset: 3px;
-}
-
-.placement-guide {
-  margin-top: 12px;
-  padding: 16px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(21, 20, 17, 0.72);
-}
-
-.placement-grid {
-  margin-top: 14px;
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 10px;
-}
-
-.placement-grid article {
-  min-height: 128px;
-  display: grid;
-  align-content: start;
-  gap: 8px;
-  padding: 12px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(247, 240, 230, 0.05);
-}
-
-.placement-grid strong {
-  color: var(--ink);
-  font-size: 15px;
-}
-
-.placement-grid span {
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.42;
-}
-
 .category-manager {
   margin-top: 12px;
   padding: 16px;
@@ -405,10 +342,6 @@ select option {
     flex: 1;
   }
 
-  .placement-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .actions {
     justify-content: flex-start;
   }
@@ -448,7 +381,4 @@ select option {
     height: 220px;
   }
 
-  .placement-grid {
-    grid-template-columns: 1fr;
-  }
 }

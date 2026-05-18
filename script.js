@@ -179,7 +179,11 @@ function getHeroPhoto(filter) {
     return galleryPhotos.find((photo) => photo.featured) || galleryPhotos[0];
   }
 
-  return galleryPhotos.find((photo) => photo.category === filter) || getHeroPhoto("all");
+  return (
+    galleryPhotos.find((photo) => photo.category === filter && photo.featured) ||
+    galleryPhotos.find((photo) => photo.category === filter) ||
+    getHeroPhoto("all")
+  );
 }
 
 function renderGallery(photos) {

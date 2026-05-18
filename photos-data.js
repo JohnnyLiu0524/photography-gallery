@@ -32,14 +32,6 @@ window.PHOTOS = [
     "rotation": 0
   },
   {
-    "src": "photos/064ca582da4b56f3fd0da539522eabde.jpg",
-    "category": "people",
-    "title": "Ice Track",
-    "meta": "People / Human Moment",
-    "layout": "wide",
-    "rotation": 0
-  },
-  {
     "src": "photos/077dbdf450a447710c85aca5f5cecd35.jpg",
     "category": "people",
     "title": "Deck Light",
@@ -173,7 +165,8 @@ window.PHOTOS = [
     "title": "Ice Track II",
     "meta": "People / Human Moment",
     "layout": "wide",
-    "rotation": 0
+    "rotation": 0,
+    "featured": true
   },
   {
     "src": "photos/a2f15f4602d3e5ab2a4c4d9cf0104309.jpg",
@@ -370,16 +363,15 @@ window.PHOTOS = [
   {
     "src": "photos/595cab137cf8e052-photomode-22082025-230507.png",
     "category": "cyberpunk-2077",
-    "title": "Night City",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "wide",
-    "rotation": 0,
-    "featured": true
+    "rotation": 0
   },
   {
     "src": "photos/99aae2435a967430-photomode-22082025-161825.png",
     "category": "cyberpunk-2077",
-    "title": "Afterlife",
+    "title": "Cyberpunk 2077",
     "meta": "Nature / Outdoor Frame",
     "layout": "",
     "rotation": 0
@@ -387,23 +379,15 @@ window.PHOTOS = [
   {
     "src": "photos/def3751e682aba9b-photomode-22082025-222504.png",
     "category": "cyberpunk-2077",
-    "title": "Cyborg",
+    "title": "Cyberpunk 2077",
     "meta": "Nature / Outdoor Frame",
     "layout": "tall",
     "rotation": 270
   },
   {
-    "src": "photos/c1c2de2db1617703-lut-env2.png",
-    "category": "cyberpunk-2077",
-    "title": "LUT+env2",
-    "meta": "City / Urban Frame",
-    "layout": "",
-    "rotation": 0
-  },
-  {
     "src": "photos/94b6f2d801c2d2a3-photomode-02022024-215628.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 02022024 215628",
+    "title": "Cyberpunk 2077",
     "meta": "City / Urban Frame",
     "layout": "",
     "rotation": 0
@@ -411,23 +395,7 @@ window.PHOTOS = [
   {
     "src": "photos/2c7e320d60d89f9b-photomode-02022024-222248.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 02022024 222248",
-    "meta": "City / Urban Frame",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/a45df7bb83aa2acf-photomode-02022024-222338.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 02022024 222338",
-    "meta": "City / Urban Frame",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/eeb277f52fb29321-photomode-02022024-222516.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 02022024 222516",
+    "title": "Cyberpunk 2077",
     "meta": "City / Urban Frame",
     "layout": "",
     "rotation": 0
@@ -435,7 +403,7 @@ window.PHOTOS = [
   {
     "src": "photos/34e8081793003fc4-photomode-02022024-222728.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 02022024 222728",
+    "title": "Cyberpunk 2077",
     "meta": "City / Urban Frame",
     "layout": "",
     "rotation": 0
@@ -443,7 +411,7 @@ window.PHOTOS = [
   {
     "src": "photos/dc4d9a017d22920c-photomode-02022024-222903.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 02022024 222903",
+    "title": "Cyberpunk 2077",
     "meta": "City / Urban Frame",
     "layout": "",
     "rotation": 0
@@ -451,7 +419,7 @@ window.PHOTOS = [
   {
     "src": "photos/e34cd4e7a10436b4-photomode-02022024-223045.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 02022024 223045",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -459,15 +427,7 @@ window.PHOTOS = [
   {
     "src": "photos/123e866fc25a21a5-photomode-02022024-223127.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 02022024 223127",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/365cc5586484dff9-photomode-02022024-223516.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 02022024 223516",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -475,7 +435,7 @@ window.PHOTOS = [
   {
     "src": "photos/05c15546fdb88029-photomode-02022024-223810.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 02022024 223810",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -483,15 +443,7 @@ window.PHOTOS = [
   {
     "src": "photos/8b28df34847a55d5-photomode-02022024-223847.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 02022024 223847",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/0e25f76562e25dda-photomode-02022024-224140.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 02022024 224140",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -499,7 +451,7 @@ window.PHOTOS = [
   {
     "src": "photos/47f90d64af4a0ad3-photomode-02022024-224338.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 02022024 224338",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -507,7 +459,7 @@ window.PHOTOS = [
   {
     "src": "photos/4d0ffeda98e12d77-photomode-02032024-221635.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 02032024 221635",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -515,7 +467,7 @@ window.PHOTOS = [
   {
     "src": "photos/755ff145fe77960f-photomode-03022024-140538.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 03022024 140538",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -523,7 +475,7 @@ window.PHOTOS = [
   {
     "src": "photos/2646bbba9a92ed65-photomode-03032024-193723.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 03032024 193723",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -531,7 +483,7 @@ window.PHOTOS = [
   {
     "src": "photos/16df8fba953c28d9-photomode-03032024-193821.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 03032024 193821",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -539,7 +491,7 @@ window.PHOTOS = [
   {
     "src": "photos/86d19ed96ad6f2b2-photomode-04092025-231244.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 04092025 231244",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -547,39 +499,7 @@ window.PHOTOS = [
   {
     "src": "photos/ef3131d4a20e00f6-photomode-05092025-143329.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 05092025 143329",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/7291fd557a92013f-photomode-05092025-220522.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 05092025 220522",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/ee1f72bba260865d-photomode-05092025-223412.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 05092025 223412",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/e08dbd544bf2b429-photomode-06032024-204346.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 06032024 204346",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/51ddb5295ab04bf9-photomode-06032024-204624.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 06032024 204624",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -587,7 +507,7 @@ window.PHOTOS = [
   {
     "src": "photos/fdb0b6522e9b3b45-photomode-06032024-221301.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 06032024 221301",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -595,15 +515,7 @@ window.PHOTOS = [
   {
     "src": "photos/616e14ceb4dfc1eb-photomode-06082025-111154.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 06082025 111154",
-    "meta": "City / Urban Frame",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/f9077eab28ba3ce8-photomode-07022024-224429.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 07022024 224429",
+    "title": "Cyberpunk 2077",
     "meta": "City / Urban Frame",
     "layout": "",
     "rotation": 0
@@ -611,7 +523,7 @@ window.PHOTOS = [
   {
     "src": "photos/ff9e1995d5d777b1-photomode-07022024-224825.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 07022024 224825",
+    "title": "Cyberpunk 2077",
     "meta": "City / Urban Frame",
     "layout": "",
     "rotation": 0
@@ -619,7 +531,7 @@ window.PHOTOS = [
   {
     "src": "photos/158a88da2e7df7a5-photomode-07022024-225827.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 07022024 225827",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -627,7 +539,7 @@ window.PHOTOS = [
   {
     "src": "photos/cdd7b7679361682e-photomode-07022024-230350.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 07022024 230350",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -635,7 +547,7 @@ window.PHOTOS = [
   {
     "src": "photos/94bea3f9f5e2653b-photomode-07022024-231023.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 07022024 231023",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -643,7 +555,7 @@ window.PHOTOS = [
   {
     "src": "photos/3108ffceec82d8b3-photomode-07022024-231116.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 07022024 231116",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -651,7 +563,7 @@ window.PHOTOS = [
   {
     "src": "photos/0435a9eeb6e9b9e1-photomode-07022024-231159.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 07022024 231159",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -659,15 +571,7 @@ window.PHOTOS = [
   {
     "src": "photos/6eba7e67515d8fe4-photomode-07022024-231304.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 07022024 231304",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/c4223b96a44f6a04-photomode-07022024-231446.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 07022024 231446",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -675,7 +579,7 @@ window.PHOTOS = [
   {
     "src": "photos/7b19478a8f10224b-photomode-07022024-231948.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 07022024 231948",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -683,7 +587,7 @@ window.PHOTOS = [
   {
     "src": "photos/5da350727e0f6b34-photomode-07022024-232128.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 07022024 232128",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -691,7 +595,7 @@ window.PHOTOS = [
   {
     "src": "photos/bf1117a1e84481c0-photomode-07022024-232218.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 07022024 232218",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -699,7 +603,7 @@ window.PHOTOS = [
   {
     "src": "photos/45394c2e4bac0dc0-photomode-07022024-232402.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 07022024 232402",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -707,7 +611,7 @@ window.PHOTOS = [
   {
     "src": "photos/5434dbbb8cfdd958-photomode-08022024-210338.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 08022024 210338",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -715,7 +619,7 @@ window.PHOTOS = [
   {
     "src": "photos/2875e45f3584f5f2-photomode-08022024-210735.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 08022024 210735",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -723,15 +627,7 @@ window.PHOTOS = [
   {
     "src": "photos/0a31a913925ca55e-photomode-08032024-214316.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 08032024 214316",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/609439cf8b3fc7f7-photomode-08032024-220644.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 08032024 220644",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -739,39 +635,7 @@ window.PHOTOS = [
   {
     "src": "photos/7759118a136d3203-photomode-09032024-190819.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 09032024 190819",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/7f438b2205d62217-photomode-09082025-215643.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 09082025 215643",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/d024a6f31eb59f98-photomode-09082025-215800.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 09082025 215800",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/47c7baf0b1e03d3b-photomode-10022024-235311.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 10022024 235311",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/445f157091d57f34-photomode-10082025-223849.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 10082025 223849",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -779,31 +643,7 @@ window.PHOTOS = [
   {
     "src": "photos/f64350a913df8769-photomode-10082025-223930.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 10082025 223930",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/ed8ac004c32d3fb9-photomode-10082025-224002.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 10082025 224002",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/3ceccda80a0a4a5d-photomode-10082025-224320.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 10082025 224320",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/d8dae535a5d99cda-photomode-10082025-232219.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 10082025 232219",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -811,7 +651,7 @@ window.PHOTOS = [
   {
     "src": "photos/e411a72be3f199c1-photomode-10082025-232709.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 10082025 232709",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -819,7 +659,7 @@ window.PHOTOS = [
   {
     "src": "photos/e0aeba9fe0ec079a-photomode-10102023-193430.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 10102023 193430",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -827,15 +667,7 @@ window.PHOTOS = [
   {
     "src": "photos/f8df39a49b5f41c7-photomode-10102023-194712.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 10102023 194712",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/cb0cc1bd6204d40b-photomode-10102023-194915.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 10102023 194915",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -843,7 +675,7 @@ window.PHOTOS = [
   {
     "src": "photos/9ff41cdcfed0eb19-photomode-10102023-195746.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 10102023 195746",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -851,7 +683,7 @@ window.PHOTOS = [
   {
     "src": "photos/8c1a79de93acf416-photomode-10102023-200808.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 10102023 200808",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -859,7 +691,7 @@ window.PHOTOS = [
   {
     "src": "photos/033fe698f0815f57-photomode-10102023-200937.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 10102023 200937",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -867,15 +699,7 @@ window.PHOTOS = [
   {
     "src": "photos/747996b7233570ff-photomode-10102023-201227.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 10102023 201227",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/9f08f77646c14844-photomode-10102023-201457.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 10102023 201457",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -883,23 +707,7 @@ window.PHOTOS = [
   {
     "src": "photos/09642fdb406209d5-photomode-10102023-201822.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 10102023 201822",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/56453d68b999e797-photomode-10102023-202216.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 10102023 202216",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/39a9ba3d0e0651f4-photomode-11022024-001704.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 001704",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -907,7 +715,7 @@ window.PHOTOS = [
   {
     "src": "photos/8f4891fafe4cb306-photomode-11022024-010244.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 010244",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -915,23 +723,7 @@ window.PHOTOS = [
   {
     "src": "photos/2444d3d6af7c5428-photomode-11022024-010434.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 010434",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/3765a976a3da437f-photomode-11022024-010625.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 010625",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/cdd65b965a8958fb-photomode-11022024-011852.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 011852",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -939,7 +731,7 @@ window.PHOTOS = [
   {
     "src": "photos/3e7fce14e90ae9e0-photomode-11022024-012104.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 012104",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -947,103 +739,7 @@ window.PHOTOS = [
   {
     "src": "photos/42cf53af2f1aa8ef-photomode-11022024-012332.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 012332",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/59775641a535c5a3-photomode-11022024-012602.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 012602",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/a5fad739211ff5ea-photomode-11022024-012708.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 012708",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/858bd4531d0fe093-photomode-11022024-014730.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 014730",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/c67a75759f69e2a9-photomode-11022024-015212.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 015212",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/830244032c6799c1-photomode-11022024-015340.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 015340",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/ffa768c117b641a1-photomode-11022024-015508.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 015508",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/8bea2eeece892dfc-photomode-11022024-015630.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 015630",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/4586a726a88d7759-photomode-11022024-155857.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 155857",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/ada4558cc15bce5d-photomode-11022024-160124.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 160124",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/d8777afe840356eb-photomode-11022024-163537.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 163537",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/486921e3dda488a7-photomode-11022024-164949.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 164949",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/a782648ea439eb96-photomode-11022024-171321.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 171321",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1051,7 +747,7 @@ window.PHOTOS = [
   {
     "src": "photos/def27fd537b1a853-photomode-11022024-213055.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 213055",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1059,7 +755,7 @@ window.PHOTOS = [
   {
     "src": "photos/6930cc1b23e202b8-photomode-11022024-225318.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 225318",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1067,15 +763,7 @@ window.PHOTOS = [
   {
     "src": "photos/0fc3797a45e0cf8e-photomode-11022024-225443.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 225443",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/5b39054e5b9454a8-photomode-11022024-225517.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 225517",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1083,7 +771,7 @@ window.PHOTOS = [
   {
     "src": "photos/7b6dca7717f1074d-photomode-11022024-225719.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 225719",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1091,7 +779,7 @@ window.PHOTOS = [
   {
     "src": "photos/236aff4dcc66a4e4-photomode-11022024-230344.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 230344",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1099,7 +787,7 @@ window.PHOTOS = [
   {
     "src": "photos/4303e1f77b31c45a-photomode-11022024-230801.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 230801",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1107,7 +795,7 @@ window.PHOTOS = [
   {
     "src": "photos/4f2a0b1303c306f2-photomode-11022024-232205.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 232205",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1115,15 +803,7 @@ window.PHOTOS = [
   {
     "src": "photos/697ce376d6b01e7c-photomode-11022024-234620.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 234620",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/c71a0d93c8a5a809-photomode-11022024-234738.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 234738",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1131,7 +811,7 @@ window.PHOTOS = [
   {
     "src": "photos/4342beecb306fb9b-photomode-11022024-234834.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 234834",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1139,7 +819,7 @@ window.PHOTOS = [
   {
     "src": "photos/741cff63c2718eb4-photomode-11022024-234914.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 234914",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1147,7 +827,7 @@ window.PHOTOS = [
   {
     "src": "photos/a39ca004aa55906d-photomode-11022024-235143.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 235143",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1155,7 +835,7 @@ window.PHOTOS = [
   {
     "src": "photos/dfb41b1590dcf1ce-photomode-11022024-235529.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 235529",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1163,23 +843,7 @@ window.PHOTOS = [
   {
     "src": "photos/2e8576a0df078c6d-photomode-11022024-235556.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 11022024 235556",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/7059577cc297da6a-photomode-11102023-225428.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 11102023 225428",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/31c7235a6c96a095-photomode-12022024-002229.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 12022024 002229",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1187,7 +851,7 @@ window.PHOTOS = [
   {
     "src": "photos/f413d1863babb6a4-photomode-12022024-002341.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 12022024 002341",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1195,47 +859,7 @@ window.PHOTOS = [
   {
     "src": "photos/11f09a9b7df89d62-photomode-12022024-002438.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 12022024 002438",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/a9dedd5509144ddd-photomode-12022024-003223.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 12022024 003223",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/78bd20dcdeacecd0-photomode-12022024-003309.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 12022024 003309",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/ede91fbc50b46f92-photomode-12022024-003715.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 12022024 003715",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/43cd0a6af16d43ad-photomode-12022024-004406.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 12022024 004406",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/ead3122c29409a1c-photomode-12022024-005045.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 12022024 005045",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1243,7 +867,7 @@ window.PHOTOS = [
   {
     "src": "photos/b145f91324bd67ca-photomode-12022024-201449.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 12022024 201449",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1251,23 +875,7 @@ window.PHOTOS = [
   {
     "src": "photos/4751df1d6e761787-photomode-12022024-213606.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 12022024 213606",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/50f09a01efdc813b-photomode-12022024-215908.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 12022024 215908",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/3515aff3df2a9b20-photomode-12022024-222150.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 12022024 222150",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1275,31 +883,7 @@ window.PHOTOS = [
   {
     "src": "photos/e224c219f64989d0-photomode-12022024-225440.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 12022024 225440",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/6c6ba407b0605f31-photomode-12022024-225510.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 12022024 225510",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/a9316072d8513459-photomode-12022024-225547.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 12022024 225547",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/91407cbfd657f022-photomode-12022024-225631.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 12022024 225631",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1307,7 +891,7 @@ window.PHOTOS = [
   {
     "src": "photos/acc833ba24cc73e6-photomode-12022024-230852.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 12022024 230852",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1315,7 +899,7 @@ window.PHOTOS = [
   {
     "src": "photos/a49b943be1782cf1-photomode-14082025-141536.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 14082025 141536",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1323,7 +907,7 @@ window.PHOTOS = [
   {
     "src": "photos/55da6da8eaa00189-photomode-16012026-214326.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 16012026 214326",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1331,23 +915,7 @@ window.PHOTOS = [
   {
     "src": "photos/9ba7547a36edf840-photomode-16022024-003924.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 16022024 003924",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/0e5da5165d435e4b-photomode-17022024-012547.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 17022024 012547",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/53ca125a1a342407-photomode-17022024-012737.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 17022024 012737",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1355,7 +923,7 @@ window.PHOTOS = [
   {
     "src": "photos/75b392b848cc1f8a-photomode-17022024-012929.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 17022024 012929",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1363,7 +931,7 @@ window.PHOTOS = [
   {
     "src": "photos/3b32e7b737256121-photomode-17022024-013009.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 17022024 013009",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1371,7 +939,7 @@ window.PHOTOS = [
   {
     "src": "photos/5cad2be294ded768-photomode-17022024-013159.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 17022024 013159",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1379,7 +947,7 @@ window.PHOTOS = [
   {
     "src": "photos/261d7322699b857b-photomode-17022024-014648.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 17022024 014648",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1387,15 +955,7 @@ window.PHOTOS = [
   {
     "src": "photos/b955ac9508ced30e-photomode-17022024-015243.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 17022024 015243",
-    "meta": "Night City / Critical Moment",
-    "layout": "",
-    "rotation": 0
-  },
-  {
-    "src": "photos/499c05a7dc8a7c81-photomode-18022024-005224.png",
-    "category": "cyberpunk-2077",
-    "title": "Photomode 18022024 005224",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1403,7 +963,7 @@ window.PHOTOS = [
   {
     "src": "photos/6159927a6c98af20-photomode-18022024-005613.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 18022024 005613",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1411,7 +971,7 @@ window.PHOTOS = [
   {
     "src": "photos/8c3462540fb9ba7f-photomode-18022024-011623.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 18022024 011623",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1419,7 +979,7 @@ window.PHOTOS = [
   {
     "src": "photos/800cfb2fd4f7e608-photomode-18022024-013548.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 18022024 013548",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1427,7 +987,7 @@ window.PHOTOS = [
   {
     "src": "photos/f42b1c234b578f9a-photomode-18022024-180415.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 18022024 180415",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1435,7 +995,7 @@ window.PHOTOS = [
   {
     "src": "photos/a11ee7aa62ab2320-photomode-18082025-230535.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 18082025 230535",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1443,7 +1003,7 @@ window.PHOTOS = [
   {
     "src": "photos/96c0f081cd76b1a8-photomode-19022024-015849.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 19022024 015849",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1451,7 +1011,7 @@ window.PHOTOS = [
   {
     "src": "photos/7e5edb29d58bcdbe-photomode-19022024-022013.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 19022024 022013",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1459,7 +1019,7 @@ window.PHOTOS = [
   {
     "src": "photos/3cbd7d1007bd8914-photomode-19022024-022116.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 19022024 022116",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1467,7 +1027,7 @@ window.PHOTOS = [
   {
     "src": "photos/13f563b51a3bd668-photomode-19022024-215708.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 19022024 215708",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1475,7 +1035,7 @@ window.PHOTOS = [
   {
     "src": "photos/02f7e322a8d45552-photomode-19022024-220045.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 19022024 220045",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
@@ -1483,7 +1043,7 @@ window.PHOTOS = [
   {
     "src": "photos/220e59ab7daed689-photomode-19022024-230934.png",
     "category": "cyberpunk-2077",
-    "title": "Photomode 19022024 230934",
+    "title": "Cyberpunk 2077",
     "meta": "Night City / Critical Moment",
     "layout": "",
     "rotation": 0
